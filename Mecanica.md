@@ -1,4 +1,4 @@
-#Movimiento
+# Movimiento
 -El robot cuenta con  dos partes de mecanismos independientes, el tren delantero y el tren trasero:
 
 -Tren delantero
