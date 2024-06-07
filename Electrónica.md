@@ -14,3 +14,18 @@ Los sensores para detectar distancia, funcionan con ondas de ultrasonido, donde 
 ## Batería
 Al adquirir un kit de robótica obtuvimos una batería de 9V, con la que pudimos alimentar todos los componentes del robot. 
 
+## MG90S
+Hemos seleccionado al servomotor mg90s debido a su potente torque en un tamaño compacto, siendo esté más efectivo que su predecesor el Sg90 funcionando con 5 V nos permite tener una dirección precisa y con un toruqe de 2,5kg.cm a 6V
+
+## Motor
+Con el kit adquirido obtuvimos varias piezas que pudimos aprovechar como los motores, sus bases y las ruedas. Cada uno de los morores a 12V eran capaces de ir a  una velocidad nominal de 250rpm y un torque 3,5Kg a 12V. Por lo tanto usando un solo motor a 9V seria suficienta para darle la velocidad, control y seguimiento necesario, gracias a su encode que nos permite tener una mayor exactitud en el recorrido que el robot debe hacer en cancha.
+
+
+
+
+
+
+
+
+
+
