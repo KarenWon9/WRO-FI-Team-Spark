@@ -6,4 +6,3 @@ Todas las partes mecánicas y de alimentación se colocaron en este nivel, eso i
 
 ## Superior
 En este se colocó el controlador (Arduino Mega 2560), junto como el puente h (L298n), los sensores ultrasonidos ( HC-S04) y la cámara pixy2.
-
