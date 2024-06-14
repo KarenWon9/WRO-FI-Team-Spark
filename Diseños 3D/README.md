@@ -9,5 +9,5 @@ Para el agarre del eje se utilizó TPU o filamento flexible, se podría utilizar
 ## Mecánica
 Para piezas mecánicas del chasis como engranajes, y sistema Ackermann se utilizó PLA+ pero se puede utilizar los filamentos ya dichos anteriormente con una densidad mínima de 70% (para el proyecto se utilizo un 80%)
 
-### Nota
-Todas las piezas fueron impresas en una impresora 3D NEPTUNE 3 pro
+>[!NOTE]
+>Todas las piezas fueron impresas en una impresora 3D NEPTUNE 3 pro
