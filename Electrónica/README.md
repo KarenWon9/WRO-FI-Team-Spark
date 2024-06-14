@@ -19,5 +19,3 @@ Hemos seleccionado al servomotor mg90s debido a su potente torque en un tamaño 
 
 ## Motor
 Con el kit adquirido obtuvimos varias piezas que pudimos aprovechar como los motores, sus bases y las ruedas. Cada uno de los morores a 12V eran capaces de ir a  una velocidad nominal de 250rpm y un torque 3,5Kg a 12V. Por lo tanto usando un solo motor a 9V seria suficienta para darle la velocidad, control y seguimiento necesario, gracias a su encode que nos permite tener una mayor exactitud en el recorrido que el robot debe hacer en cancha.
-
-/Electrónica/Diagrama de cableado.jpg
