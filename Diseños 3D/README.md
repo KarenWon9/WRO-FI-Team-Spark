@@ -1,7 +1,7 @@
-# Piezas utilizadas
+# Piezas 3D utilizadas
 
 | Piezas | Cantidad |
-| --- | --- |
+| :--- | --- |
 | Rodamiento de eje hexagonal | 4 |
 | Porta sensor ultasonido | 3 |
 | Adaptador de rueda de atrás al eje hexagonal | 2 |
