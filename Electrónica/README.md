@@ -17,9 +17,6 @@ Se decidió usar un Arduino Mega ya que cuenta con 54 pines de los cuales 16 son
 
 Los sensores para detectar distancia, funcionan con ondas de ultrasonido, donde está un emisor que transmite la onda y un detector que nos indica cuánta distancia hay según el tiempo que tardó el rebote de dicha onda. Le permite al robot tener una idea de su ubicación en la cancha ya que tiene una capacidad de detección máxima de 4.5m. y la cancha tiene dimensiones de 3x3m.
 
-## Batería
-Al adquirir un kit de robótica obtuvimos una batería de 9V, con la que pudimos alimentar todos los componentes del robot. 
-
 ## MG90S
 Hemos seleccionado al servomotor mg90s debido a su potente torque en un tamaño compacto, siendo esté más efectivo que su predecesor el Sg90 funcionando con 5 V nos permite tener una dirección precisa y con un toruqe de 2,5kg.cm a 6V
 
@@ -36,3 +33,6 @@ Hemos seleccionado al servomotor mg90s debido a su potente torque en un tamaño 
 | **Par de bloqueo** | 3.1Kg.cm | **Par nominal** | 0.67Kg.cm |
 
 Con el kit adquirido obtuvimos varias piezas que pudimos aprovechar como los motores, sus bases y las ruedas. Cada uno de los morores a 12V eran capaces de ir a  una velocidad nominal de 250rpm y un torque 3,5Kg a 12V. Por lo tanto usando un solo motor a 9V seria suficienta para darle la velocidad, control y seguimiento necesario, gracias a su encode que nos permite tener una mayor exactitud en el recorrido que el robot debe hacer en cancha.
+
+## Batería
+Al adquirir un kit de robótica obtuvimos una batería de 9V, con la que pudimos alimentar todos los componentes del robot. 
