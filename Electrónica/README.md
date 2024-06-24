@@ -1,3 +1,20 @@
+# Lista de componentes electronicos
+| Piezas  | Cantidad |
+| --- | --- |
+| Arduino mega | 1 |
+| Camara Pixy2 | 1 |
+| Sensor ultrasonido (HC-SR04) | 3 |
+| Mini protoboard de 170 puntos | 1 |
+| Resistencia de 10k | 1 |
+| Puente H (L298) | 1 |
+| Botón pull-up | 1 |
+| Cable dupont macho-macho | 6 |
+| Cable dupont macho-hembra | 14 |
+| Motor GA37-520 de 320rpm | 1 |
+| Servo motor MG995 | 1 |
+| Bateria 9V | 1 |
+| Contrapeso de 194g | 2 |
+
 # Elección de componentes
 ## Pixy2
  Es una cámara que puede detectar 7 colores al mismo tiempo, cuenta con un procesador y permite exportar únicamente la información que se necesita a través de distintos puertos serial UART, SPI, I2C, digital out o analógicos. Además de una velocidad de obturación de 60 fps por lo que el movimiento constante no será problema a la hora de detectar colores, cuenta con una apertura de 60º horizontal y 40º vertical. También cuenta con leds de luz blanca graduable para mejor percepción de los colores.
