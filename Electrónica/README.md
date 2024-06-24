@@ -17,8 +17,8 @@ Se decidió usar un Arduino Mega ya que cuenta con 54 pines de los cuales 16 son
 
 Los sensores para detectar distancia, funcionan con ondas de ultrasonido, donde está un emisor que transmite la onda y un detector que nos indica cuánta distancia hay según el tiempo que tardó el rebote de dicha onda. Le permite al robot tener una idea de su ubicación en la cancha ya que tiene una capacidad de detección máxima de 4.5m. y la cancha tiene dimensiones de 3x3m.
 
-## MG90S
-Hemos seleccionado al servomotor mg90s debido a su potente torque en un tamaño compacto, siendo esté más efectivo que su predecesor el Sg90 funcionando con 5 V nos permite tener una dirección precisa y con un toruqe de 2,5kg.cm a 6V
+## MG995
+Hemos seleccionado al servomotor MG995 debido a su potente torque en un tamaño semicompacto, siendo esté más efectivo que su predecesor funcionando lo que nos permite tener una dirección mmucho más precisa y con un torque de 9kg.cm a 5V.
 
 ## Motor GA37-520
 

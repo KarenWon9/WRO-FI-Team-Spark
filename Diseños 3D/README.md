@@ -1,5 +1,19 @@
 # Piezas utilizadas
 
+| Piezas | Cantidad |
+| --- | --- |
+| Rodamiento de eje hexagonal | 4 |
+| Porta sensor ultasonido | 3 |
+| Adaptador de rueda de atrás al eje hexagonal | 2 |
+| Enganche de rueda delantera al pivote | 2 |
+| Palier móvil de dirección | 2 |
+| Pivote de rueda delantera | 2 |
+| Base de porta pixy | 1 |
+| Chasis superio | 1 |
+| Chasis inferior | 1 |
+| Porta pixy | 1 |
+| Engranaje de eje hexagonal | 1 |
+| Engranaje de motor | 1 |
 
 # Recomedaciones
 
