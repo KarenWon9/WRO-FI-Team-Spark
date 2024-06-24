@@ -9,7 +9,7 @@
 | Palier móvil de dirección | 2 |
 | Pivote de rueda delantera | 2 |
 | Base de porta pixy | 1 |
-| Chasis superio | 1 |
+| Chasis superior | 1 |
 | Chasis inferior | 1 |
 | Porta pixy | 1 |
 | Engranaje de eje hexagonal | 1 |
@@ -20,7 +20,7 @@
 ## Chasis
 Para las piezas de estructura del chasis se utilizó filamento PETG, pero se puede utilizar otros tipos de filamentos rígidos como PLA+, PLA y ABS, con una densidad mínima de 20% (para el proyecto se utilizo un 30% y 40%)
 
-## Pivote
+## Rodamiento de eje hexagonal
 Para el agarre del eje se utilizó TPU o filamento flexible, se podría utilizar otro tipo de filamento con otras propiedades pero no es lo más recomendable tomando en cuenta el uso (se puede variar la densidad dependiendo del uso y usuario)
 
 ## Mecánica

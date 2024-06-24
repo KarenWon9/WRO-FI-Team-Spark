@@ -2,7 +2,7 @@
 | Piezas  | Cantidad |
 | --- | --- |
 | Arduino mega | 1 |
-| Camara Pixy2 | 1 |
+| Cámara Pixy2 | 1 |
 | Sensor ultrasonido (HC-SR04) | 3 |
 | Mini protoboard de 170 puntos | 1 |
 | Resistencia de 10k | 1 |
@@ -14,6 +14,10 @@
 | Servo motor MG995 | 1 |
 | Bateria 9V | 1 |
 | Contrapeso de 194g | 2 |
+
+# Diagrama de cableado
+![Diagrama de cableado](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/Electr%C3%B3nica/Diagrama%20de%20cableado.jpg)
+
 
 # Elección de componentes
 ## Pixy2
