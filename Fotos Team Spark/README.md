@@ -13,7 +13,7 @@
 ![Ensamblaje de los pisos del chasis](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/Fotos%20Team%20Spark/Ensamblaje%20de%20los%20pisos%20del%20chasis.jpg)
 
 ### Conectando la electrónica.
-![Conectando la electronica 1](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/Fotos%20Team%20Spark/Conectando%20la%20electronica%201.jpg)
+![Conectando la electronica 1](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/Fotos%20Team%20Spark/Conectando%20la%20electr%C3%B3nica%201.jpg)
 
 ![Conectando la electrónica 2](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/Fotos%20Team%20Spark/Conectando%20la%20electr%C3%B3nica%202.jpg)
 
