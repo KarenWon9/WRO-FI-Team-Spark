@@ -1,4 +1,4 @@
-# Lista de componentes electronicos
+# Lista de componentes electrónicos
 | Piezas  | Cantidad |
 | --- | --- |
 | Arduino mega | 1 |
