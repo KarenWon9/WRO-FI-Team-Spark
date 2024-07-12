@@ -1,23 +1,5 @@
 # Introducción 
 
-# Lista de componentes electrónicos
-| Piezas  | Cantidad |
-| --- | --- |
-| Arduino mega | 1 |
-| Cámara Pixy2 | 1 |
-| Sensor ultrasonido (HC-SR04) | 3 |
-| Mini protoboard de 170 puntos | 1 |
-| Resistencia de 10k | 1 |
-| Puente H (L298) | 1 |
-| Botón pull-up | 1 |
-| Cable dupont macho-macho | 6 |
-| Cable dupont macho-hembra | 14 |
-| Motor GA37-520 de 320rpm | 1 |
-| Servo motor MG995 | 1 |
-| Bateria 9V | 1 |
-| Contrapeso de 194g | 2 |
-| Sensor de color (TCS3200) | 1 |
-
 # Chasis
 El chasis fue diseñado por impresión 3D de manera que permitiese el movimiento de las ruedas del sistema Ackerman y el soporte de todas las partes electrónicas y mecánicas. Además se dividió en dos niveles.
 
@@ -37,18 +19,37 @@ Se decidió que el robot tuviese tracción delantera, además de un mecanismo Ac
 El movimiento de las ruedas traseras se transmite del actuador (motor de conducción) a las ruedas por un engranaje de 36mm de diámetro a otro idéntico colocado en un eje hexagonal que permite una transmisión de movimiento efectiva sin necesidad de agregar componentes extras como sería con ejes circulares. El actuador utilizado tiene un torque de 3,5Kg.cm y una velocidad nominal de 250rpm a 12V, sin embargo se decidió usar con una tensión eléctrica de 9V, lo que daría como resultado 187rpm, es decir una velocidad 1,37m/s.
 
 # Componentes
+
+# Lista de componentes electrónicos
+| Piezas  | Cantidad |
+| --- | --- |
+| Arduino mega | 1 |
+| Cámara Pixy2 | 1 |
+| Sensor ultrasonido (HC-SR04) | 3 |
+| Mini protoboard de 170 puntos | 1 |
+| Resistencia de 10k | 1 |
+| Puente H (L298) | 1 |
+| Botón pull-up | 1 |
+| Cable dupont macho-macho | 6 |
+| Cable dupont macho-hembra | 14 |
+| Motor GA37-520 de 320rpm | 1 |
+| Servo motor MG995 | 1 |
+| Bateria 9V | 1 |
+| Contrapeso de 194g | 2 |
+| Sensor de color (TCS34725) | 1 |
+
 ## Batería
 Al adquirir un kit de robótica obtuvimos una batería de 9V, con la que pudimos alimentar todos los componentes del robot, incluso en controlador ya que al ser un Arduino Mega permite un voltaje de alimentación de 7-12V, por lo que únicamente se ramificaron los cables de alimentación provenientes de la batería hacia el Arduino Mega y el puente
 
 ## Controlador (Arduino Mega 2560)
 Se decidió usar único controlador,  el Arduino Mega ya que cuenta con 54 pines de los cuales 16 son analógicos y 12 de señal pwm y es compatible con I2C, lo que permite la conexión de gran cantidad de componentes de ser necesario al igual que una capacidad de procesamiento para codigos grandes y complejos.
 
-## Sensor de color (TCS3200)
-![Motor GA37-520](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/TCS3200.png)
-![Tabla](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/Tabla%20TCS3200.png)
+## Sensor de color (TCS34725)
+![Esquema](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/Esquema%20TCS34725.png)
 
+Decidimos usar este sensor ya que cuenta con una fuente de luz, proporciona información sobre el color o luz, en valores alores RGB y Clear (medición total sin filtrar) y cuenta con un filtro de luz infraroja (IR), lo que minimiza la interferencia en la lectura. 
 
-Decidimos usar este sensor ya que cuenta con una fuente de luz, además proporciona información sobre el color dividiéndolo en tres componentes principales: rojo, verde y azul, el que después convierte en frecuencia con alta precision gracias a que tiene una matriz de 8x8 fotodiodos. Además su voltaje de alomentación va de 2,7 V a 5,5 V, por lo que se puede conectar directamente al Arduino Mega.
+### Código
 
 ## Motor GA37-520
 
@@ -177,7 +178,61 @@ En caso de que el primer color detectado sea naranja asignado como 2 en la cáma
             servoMotor.write(78); 
           }
         }
+```
 
+De igual forma en el desafío cerrado en lugar de cruza cuando detecta lineas, se le dijo que cruzara a la derecha si el valor era rojo y a la izquierda si el valor es verde, cabe resaltar que primero debe identificar cual es el color con la posición en 'y' más bajo, de esta forma sabemos cuál es el obstáculo que está más próximo al robot y lo guardamos com `index`.
+
+```ino
+    for (int i = 0; i < blocks; i++) { // Recorre todos los bloques detectados
+      if (pixy.ccc.blocks[i].m_signature == 1 || pixy.ccc.blocks[i].m_signature == 2) { // Si el bloque es rojo (1) o verde (2)
+        if (pixy.ccc.blocks[i].m_y > maxY) { // Si la coordenada Y del bloque actual es mayor que maxY
+          maxY = pixy.ccc.blocks[i].m_y; // Actualiza maxY
+          index = i; // Guarda el índice del bloque con la mayor Y
+        }
+      }
+    }
+```
+
+Después de que obtenemos el valor que nos intereza, guardamos sus coordendas en 'x' y 'y' con `int x = pixy.ccc.blocks[index].m_x` y `int y = pixy.ccc.blocks[index].m_y` respectivamente, además tambien guardamos el color con `signature` que tendrá valor de 1 para rojo y 2 para verde.
+
+```ino
+    if (index != -1) { // Si se encontró un bloque de interés
+      int x = pixy.ccc.blocks[index].m_x; // Obtiene la coordenada X del bloque
+      int y = pixy.ccc.blocks[index].m_y; // Obtiene la coordenada Y del bloque
+      int signature = pixy.ccc.blocks[index].m_signature; // Obtiene la firma del bloque (1 o 2)
+```
+
+Seguidamente segun las coredenadas en 'x' de nuestro valor de interes le asigna un grado entre 0° y 180°, con lo que el vículo pdrá seguir el obstáculo. 
+
+```ino
+      targetPosition = map(x, 0, 319, 0, 180); // Mapea la coordenada X a un rango de 0 a 180 grados
+      myservo.write(targetPosition); // Mueve el servomotor a la posición objetivo  
+```
+
+Gracias a varias pruebas se determinó que cuando el velor de interés estuviese en cordenadas 'y' mayores o igual a 142 y menores o igual a 180
+`(y >= 142 && y <= 180)` si su color es verde (`(signature == 1)`), el vehículo se moverá a la izquierda con el servomotor a 50°, para después hacer ciertas compensaciones. 
+
+```ino
+ if (y >= 142 && y <= 180) { // Si el bloque está dentro de una cierta área de interés en la pantalla
+        if (signature == 1) { // Si el bloque es verde (1)
+          myservo.write(50); // Mueve el servomotor hacia la izquierda
+          delay(800); // Espera 800 milisegundos
+          myservo.write(115); // Mueve el servomotor hacia la derecha
+          delay(900); // Espera 900 milisegundos
+          myservo.write(60); // Ajusta el servomotor para volver a la posición recta
+          delay(400); // Espera 400 milisegundos
+          myservo.write(78); // Vuelve el servomotor a la posición inicial (recto)
+```
+De igual forma ocurre en caso de que el color sea rojo (`(signature == 2)`), entonces el servomotor se moverá a 110° y posteriormente hará las compensaciones de ángulo.
+
+```ino
+else if (signature == 2) { // Si el bloque es rojo (2)
+          myservo.write(110); // Mueve el servomotor hacia la derecha
+          delay(1000); // Espera 1000 milisegundos
+          myservo.write(60); // Ajusta el servomotor para volver a la posición recta
+          delay(500); // Espera 500 milisegundos
+          myservo.write(78); // Vuelve el servomotor a la posición inicial (recto)
+        }
 ```
 
 ## Sensor ultrasonido(HC-S04)
