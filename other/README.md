@@ -1,11 +1,3 @@
-# Contenido
-    1. [Chasis] (#Chasis)
-        -[Inferior] (##Inferior)
-        -[Superior] (##Superior)
-    2. [Movimiento] (#Movimiento)
-        -[Tren delantero] (##Tren delantero)
-        -[Tren trasero] (##Tren trasero)
-
 # 1. Chasis
 El chasis fue diseñado por impresión 3D de manera que permitiese el movimiento de las ruedas del sistema Ackerman y el soporte de todas las partes electrónicas y mecánicas. Además se dividió en dos niveles.
 
