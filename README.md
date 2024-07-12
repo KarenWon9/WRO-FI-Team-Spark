@@ -44,8 +44,9 @@ Al adquirir un kit de robótica obtuvimos una batería de 9V, con la que pudimos
 Se decidió usar único controlador,  el Arduino Mega ya que cuenta con 54 pines de los cuales 16 son analógicos y 12 de señal pwm y es compatible con I2C, lo que permite la conexión de gran cantidad de componentes de ser necesario al igual que una capacidad de procesamiento para codigos grandes y complejos.
 
 ## Sensor de color (TCS3200)
-![Sensor de color (TCS3200)](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/Tabla%20TCS3200.jpg)
-![Motor GA37-520](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/TCS3200.jpg)
+![Motor GA37-520](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/TCS3200.png)
+![Tabla](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/Tabla%20TCS3200.png)
+
 
 Decidimos usar este sensor ya que cuenta con una fuente de luz, además proporciona información sobre el color dividiéndolo en tres componentes principales: rojo, verde y azul, el que después convierte en frecuencia con alta precision gracias a que tiene una matriz de 8x8 fotodiodos. Además su voltaje de alomentación va de 2,7 V a 5,5 V, por lo que se puede conectar directamente al Arduino Mega.
 
