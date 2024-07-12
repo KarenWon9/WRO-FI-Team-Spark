@@ -44,11 +44,14 @@ Al adquirir un kit de robótica obtuvimos una batería de 9V, con la que pudimos
 Se decidió usar único controlador,  el Arduino Mega ya que cuenta con 54 pines de los cuales 16 son analógicos y 12 de señal pwm y es compatible con I2C, lo que permite la conexión de gran cantidad de componentes de ser necesario al igual que una capacidad de procesamiento para codigos grandes y complejos.
 
 ## Sensor de color (TCS3200)
+![Sensor de color (TCS3200)](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/Tabla%20TCS3200.jpg)
+![Motor GA37-520](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/TCS3200.jpg)
+
 Decidimos usar este sensor ya que cuenta con una fuente de luz, además proporciona información sobre el color dividiéndolo en tres componentes principales: rojo, verde y azul, el que después convierte en frecuencia con alta precision gracias a que tiene una matriz de 8x8 fotodiodos. Además su voltaje de alomentación va de 2,7 V a 5,5 V, por lo que se puede conectar directamente al Arduino Mega.
 
 ## Motor GA37-520
 
-![Motor GA37-520](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/Medidas%20de%20motor%20GA37-520.jpg)
+![Motor GA37-520](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/Medidas%20de%20motor%20GA37-520.jpg)
 
 | | | | |
 | --- | --- | --- | --- |
@@ -60,7 +63,7 @@ Decidimos usar este sensor ya que cuenta con una fuente de luz, además proporci
 
 Con el kit adquirido obtuvimos varias piezas que pudimos aprovechar como los motores, sus bases y las ruedas. Cada uno de los motores a 12V eran capaces de ir a  una velocidad nominal de 250rpm y un torque 3,5Kg a 12V. Por lo tanto usando un solo motor a 9V sería suficiente para darle la velocidad, control y seguimiento necesario, gracias a su encode que nos permite tener una mayor exactitud en el recorrido que el robot debe hacer en cancha.
 
-# Código
+### Código
 Primeramente definimos las variables que van al puente h, que a su vez se conecta al motor que llamamos `IN1` e `IN2`, igualmente definimos 250 como la potencia del motor en una escala de 0 a 255 en la variable `velocidad`.
 
 ```ino
@@ -84,10 +87,11 @@ void setup() {
   }
 }
 ```
-## MG995
+## Servo motor (MG995)
+![Servo motor (MG995)](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/Medidas%20servo%20motor%20MG995.png)
 Hemos seleccionado al servomotor MG995 debido a su potente torque en un tamaño muy compacto, siendo esté más efectivo que su predecesor funcionando lo que nos permite tener una dirección mucho más precisa y con un torque de 9kg.cm a 5V.
 
-# Código
+### Código
 Para facilitar su uso, utilizamos la librería `"Servo.h"`
 y creamos una variable llamada `servoPin` donde colocamos el pin que está ocupando, en este caso es el 5.
 
@@ -176,7 +180,7 @@ En caso de que el primer color detectado sea naranja asignado como 2 en la cáma
 ```
 
 ## Sensor ultrasonido(HC-S04)
-![Sensor ultrasonido](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/Medidas%20de%20sensor%20ultrasonido%20HC-SR04.jpg)
+![Sensor ultrasonido](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/other/apoyo/Medidas%20de%20sensor%20ultrasonido%20HC-SR04.jpg)
 
 |  |  |  |  |
 | --- | --- | --- | --- |
