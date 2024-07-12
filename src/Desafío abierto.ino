@@ -96,7 +96,7 @@ void loop() {
       }
     }
     
-    // Detiene el motor
+    // Enciende el motor
     analogWrite(IN1, 0);
     analogWrite(IN2, velocidad);
   } 
