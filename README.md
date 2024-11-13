@@ -31,6 +31,8 @@
     - [Printing settings and recommendations](models/README.md#printing-settings-and-recommendations)
     - [STL files](models/stl/)
     - [Files ready to print](models/ready%20to%20print/)
+    - [Full Chasis](models/Full%20chassis%20turkey.step)
+  
 
 - 5.[ Circuit diagram](schemes/README.md#circuit-diagram)<!--[Carpeta de Fuentes](../) asi se puede hacer un enlace con una carpeta -->
     -
@@ -38,7 +40,7 @@
 - 6.[ Codes](src/)
     -
     - [Open challenge](src/Open%20challenge.ino)
-    - [Closed challenge](src/Closed%challenge.ino)
+    - [Closed challenge](src/Closed%20challenge.ino)
 
 - 7.[ Flowcharts](src/README.md#flowcharts)
     -
