@@ -463,13 +463,7 @@ individual batteries.
 | **No-load current** | ≥120mA | **Rated current**  | ≥400mA |
 | **Rated torque** | 3.1Kg.cm  | **Par nominal**  | 0.67Kg.cm    |
 
-From a robotic kit, we have obtained two motors. Each one
-to 12V, they are capable of going at a nominal speed of
-250rpm and a 3,5 kg torque. Therefore using just a 12V motor
-is enough to give it the speed, control, and attraction needed,
-as well as greater management thanks to its encoder which
-lets us have better precision in the turns that the robot should
-do in the game field.
+With the acquired kit, we have gotten various pieces that we could grip like the motors, bases, and wheels. Each motor of 12V is capable of going at a nominal speed of 250rpm and a 3,5 kg torque. Therefore using just a 12V motor is enough to give it the speed, control, and attraction needed, as well as greater management thanks to its encoder which lets have better precision in the turns that the robot should do in the game field.
 
 ### Code
 
@@ -484,33 +478,28 @@ between 255 and 0.
 ``` ino
 #define IN1 4 // Define the control pin of the motor IN1.
 #define IN2 5 // Define the control pin of the motor IN2.
-
-
 #define MAXSPEED 250 //Higher Speed of the motor.
 #define TURNSPEED 180 // turnings Speed.
 #define SPEED2 140 // secundary Speed.
-
-
 void stop() {
-  if (DEBUG) Serial3.println("Stop"); // Print "Stop" in the serial monitor if the mode depuration is active.
-  digitalWrite(IN1, LOW); // Turn off the motor in the IN1 direction.
-  digitalWrite(IN2, LOW); // Turn off the motor in the IN2 direction.
+  if (DEBUG) Serial3.println(&quot;Stop&quot;); // Print &quot;Stop&quot; in the serial monitor if the mode
+depuration is active.
+  digitalWrite(IN1, LOW); // Turn off the motor in the IN1 direction.
+  digitalWrite(IN2, LOW); // Turn off the motor in the IN2 direction.
 }
-
-
 void forward(byte speed) {
-  if (DEBUG2) Serial3.println("Forward " + String(speed)); // Print "Forward" and the speed if DEBUG2 is active.
-  analogWrite(IN1, speed); // Assign the speed in IN1 to go forward.
-  digitalWrite(IN2, LOW); 
+  if (DEBUG2) Serial3.println(&quot;Forward &quot; + String(speed)); // Print &quot;Forward&quot; and the
+speed if DEBUG2 is active.
+  analogWrite(IN1, speed); // Assign the speed in IN1 to go forward.
+  digitalWrite(IN2, LOW); 
 }
-
-
 void backward(byte speed) {
-  if (DEBUG) Serial3.println("Backward " + String(speed)); // Print "Backward" and the speed if DEBUG is active.
-  digitalWrite(IN1, LOW); // turn off IN1 to return
-  analogWrite(IN2, speed);
-}
 
+  if (DEBUG) Serial3.println(&quot;Backward &quot; + String(speed)); // Print &quot;Backward&quot; and
+the speed if DEBUG is active.
+  digitalWrite(IN1, LOW); // turn off IN1 to return
+  analogWrite(IN2, speed);
+}
 ```
 
 ## LM2596 HW-411 Step down
