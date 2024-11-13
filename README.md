@@ -48,10 +48,21 @@
 - 8.[ Vehicle photos](v-photos/README.md)
     -
 
-- 9.[Performance videos](video/README.md)
+- 9.[ Performance videos](video/README.md)
     -
     - [Open challenge](video/README.md#open-challenge)
     - [Closed challenge](video/README.md#closed-challenge)
+
+- 10.[ Team photos](t-photos/)
+    -
+    - [Official photo](t-photos/README.md#official-photo)
+    - [Funny photo](t-photos/README.md#funny-photo)
+
+- 11.[ Annex](other/)
+    -
+    - [First robot](other/First%20robot/)
+    - [Second robot](other/Scond%20robot/)
+    - [Thirt robot - Final](other/Third%20robot%20-%20Final/)
 
 
 <!---------------------------------------------espanol-------------------------------------------------------- -->
