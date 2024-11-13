@@ -1,4 +1,4 @@
-# Índice
+# Index
 
 - 1.[ Introduction](#introduction)
     -
@@ -70,7 +70,7 @@
 <!---------------------------------------------espanol-------------------------------------------------------- -->
 
 # Introduction 
-The team Spark is a team from the Salto Angel School that is participating in the World Robot Olympiad 2024 (WRO) in the future engineers’ category. This team is comprised of three students: Victoria Saez, the new Captain who is in charge of the programming part: Sebastian Salinas, who is responsible for the designing and mechanicals of the robot: and finally Rosa Wong who attends the mechanic-electronic-documentation, is also a university student at the Rafael Urdaneta University.
+The team Spark is a team from the Salto Angel School that is participating in the World Robot Olympiad 2024 (WRO) in the future engineers’ category. This team is comprised of three students: Victoria Saez, the new Captain who is in charge of the programming part: Sebastian Salina, who is responsible for the designing and mechanical parts of the robot: and finally Rosa Wong who attends the mechanic-electronic-documentation, is also a university student at the Rafael Urdaneta University.
 
 The World Robot Olympiad (WRO) is an event where young people from different parts of the world meet to show their knowledge and abilities in diverse categories. The future engineers' category is based on the creation of an autonomous robot capable of traveling around a game field that measures 3m x 3m using obstacles in it or without them. Every year, the rules and challenges partially change and every four or five years represents a different challenge.
 
@@ -269,7 +269,7 @@ Blue: // Tag the blue object.
             readDistance(currentPosition); // Update 'currentPosition'
           }
           turnLeft(); // Turn to the left
-          moveCM(40, 1, MAXSPEED); // Move the robot 40 cm forward to a higher speed. 
+          moveCM(40, 1, MAXSPEED); // Move the robot 40 cm forward at the highest speed. 
           do {
             followLine(MAXSPEED); // Follow the inner walls to high speed
             readDistance(currentPosition); // Update 'currentPosition'
@@ -299,7 +299,7 @@ Orange: // Tag the orange object.
             readDistance(currentPosition); // Update 'currentPosition'
           }
           turnRight(); // Turn to the right.
-          moveCM(40, 1, MAXSPEED); // Move the robot 40 cm forward to a higher speed.
+          moveCM(40, 1, MAXSPEED); // Move the robot 40 cm forward at the highest speed.
           do {
             followLine(MAXSPEED); // Follow the inner Wall to a higher. 
             readDistance(currentPosition); // Update 'currentPosition'
@@ -333,11 +333,11 @@ by its potential to detect distances at millimeters.
  ```ino
 #include <Wire.h> // Library to communicate I2C.
 #include <DFRobot_VL53L0X.h> // Library to the VL53L0X distance sensor.
- #define SENSORCOUNT 1 // Define the sensor`s number VL53L0X.
+ #define SENSORCOUNT 1 // Define the VL53L0X sensor`s number.
 
 
- DFRobot_VL53L0X sensors[SENSORCOUNT]; // Create an array of sensors VL53L0X.
- const uint8_t xshutPins[SENSORCOUNT] = { 38 }; // Pin to enable or disenable the sensor VL53L0X.
+ DFRobot_VL53L0X sensors[SENSORCOUNT]; // Create an array of VL53L0X sensors.
+ const uint8_t xshutPins[SENSORCOUNT] = { 38 }; // Pin to enable or disenable the VL53L0X sensor.
 
 
 void initSensor() {
@@ -345,13 +345,13 @@ void initSensor() {
 
 
   for (uint8_t i = 0; i < SENSORCOUNT; i++) {
-    pinMode(xshutPins[i], OUTPUT); // Setting the sensor`s off pin as an output. 
+    pinMode(xshutPins[i], OUTPUT); // Set the sensor`s off pin as an output. 
     digitalWrite(xshutPins[i], LOW); // Turn off the corresponding sensor. 
   }
 
 
   for (uint8_t i = 0; i < SENSORCOUNT; i++) {
-    pinMode(xshutPins[i], INPUT); // Configure the sensor`s off pin as an input to restar the sensor.
+    pinMode(xshutPins[i], INPUT); // Set the sensor`s off pin as an input to restar the sensor.
     delay(10); // Delay 10 ms to restart the sensor
     sensors[i].begin(0x2A + (i * 2)); // Start the sensor with the specific direction I2C
     sensors[i].setMode(sensors[i].eContinuous, sensors[i].eHigh); // Configure the continuous mode and the high precision.
@@ -417,7 +417,7 @@ void readDistance(unsigned int* array) {
 }
 ```
 
-Considering the values of the firstPosition, lastPosition, currentPosition and tempPosition, the robot does a correction to evade collisions both with the outer and inner wall staying centered.
+Considering the values of the firstPosition, lastPosition, currentPosition and tempPosition, the robot does an angle correction to evade collisions both with the outer and inner wall staying centered.
 
 ``` ino
 if (DEBUG2) printDistance(currentPosition); // Print the distances if DEBUG2 is active.
@@ -425,10 +425,10 @@ if (DEBUG2) printDistance(currentPosition); // Print the distances if DEBUG2 is 
     grade = map(currentPosition[2], tempPosition[2] - LMIN, tempPosition[2] + LMIN, TURNGRADE, -TURNGRADE); // Map the angle correction to the right.
     if (DEBUG) Serial3.println("1 Actual: " + String(currentPosition[2]) + ". Inicial: " + String(tempPosition[2])); // Depuration
   } else { // If the left distance is less or equal to the right 
-    grade = map(currentPosition[3], tempPosition[3] - LMIN, tempPosition[3] + LMIN, -TURNGRADE, TURNGRADE); // Map the correction angle to the left.
+    grade = map(currentPosition[3], tempPosition[3] - LMIN, tempPosition[3] + LMIN, -TURNGRADE, TURNGRADE); // Map the angle correction to the left.
     if (DEBUG) Serial3.println("2 Actual: " + String(currentPosition[3]) + ". Inicial: " + String(tempPosition[3])); // Depuration
   }
-  if (DEBUG) Serial3.println("Grades : " + String(grade)); // Print the correction angle calculated.
+  if (DEBUG) Serial3.println("Grades : " + String(grade)); // Print the angle correction calculated.
   if (grade > TURNGRADE) { // Limit the higher turning angle.
     grade = TURNGRADE;
   } else if (grade < TURNGRADE * -1) { // Limit the lower turning angle
