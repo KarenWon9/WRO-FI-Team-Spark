@@ -1,17 +1,17 @@
-### Perspectiva frontal
-![Perspectiva frontal](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/v-photos/Perspectiva%20frontal.jpg)
+# Front
+[![Whats-App-Image-2024-11-12-at-10-56-52-PM.jpg](https://i.postimg.cc/5t7kTt6k/Whats-App-Image-2024-11-12-at-10-56-52-PM.jpg)](https://postimg.cc/Z9Ncy4Pr)
 
-### Perspectiva trasera
-![Perspectiva trasera](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/v-photos/Perspectiva%20trasera.jpg)
+# Back
+[![Whats-App-Image-2024-11-12-at-10-56-54-PM.jpg](https://i.postimg.cc/RF2pCb17/Whats-App-Image-2024-11-12-at-10-56-54-PM.jpg)](https://postimg.cc/zbSF07cv)
 
-### Perspectiva derecha
-![Perspectiva derecha](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/v-photos/Pespectiva%20derecha.jpg)
+# Right
+[![Whats-App-Image-2024-11-12-at-10-56-50-PM.jpg](https://i.postimg.cc/mgSn3jR4/Whats-App-Image-2024-11-12-at-10-56-50-PM.jpg)](https://postimg.cc/TKpQfrpN)
 
-### Perspectiva izquierda
-![Perspectiva izquierda](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/v-photos/Perspectiva%20izquierda.jpg)
+# Left
+[![Whats-App-Image-2024-11-12-at-10-56-51-PM.jpg](https://i.postimg.cc/Jh42pX4k/Whats-App-Image-2024-11-12-at-10-56-51-PM.jpg)](https://postimg.cc/mPJjDt9L)
 
-### Perspectiva superior
-![Perspectiva superior](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/v-photos/Perspectiva%20superior.jpg)
+# Above 
+[![Whats-App-Image-2024-11-12-at-11-01-29-PM-1.jpg](https://i.postimg.cc/MHRPnbth/Whats-App-Image-2024-11-12-at-11-01-29-PM-1.jpg)](https://postimg.cc/0Kkd3STf)
 
-### Perspectiva inferior
-![Perspectiva inferior](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/v-photos/Perspectiva%20inferior.jpg)
+# Under
+[![Whats-App-Image-2024-11-12-at-11-01-29-PM.jpg](https://i.postimg.cc/FRYn4QSF/Whats-App-Image-2024-11-12-at-11-01-29-PM.jpg)](https://postimg.cc/S2pG63VH)

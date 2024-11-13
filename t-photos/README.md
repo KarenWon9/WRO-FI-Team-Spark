@@ -1,4 +1,5 @@
-# Foto oficial
-![Foto oficial](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/t-photos/Foto%20oficial.jpg)
+# Official photo
+[![Foto-oficial.jpg](https://i.postimg.cc/Hky6J7j8/Foto-oficial.jpg)](https://postimg.cc/G4bFVtFb)
 
-![Foto divertida](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/t-photos/Foto%20divertida.jpg)
+# Funny photo
+[![Foto-divertida.jpg](https://i.postimg.cc/PxxZwBKV/Foto-divertida.jpg)](https://postimg.cc/06TbgXT7)

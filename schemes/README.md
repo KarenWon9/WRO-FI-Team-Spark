@@ -1,4 +1,2 @@
-
-# Diagrama de cableado
-![Diagrama de cableado](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/schemes/Diagrama%20de%20cableado.png)
-
+# Circuit diagram
+[![A-adir-un-poquito-de-texto-1.png](https://i.postimg.cc/TPgsW1BF/A-adir-un-poquito-de-texto-1.png)](https://postimg.cc/nsV2yFFG)

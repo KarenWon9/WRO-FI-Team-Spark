@@ -1,2 +1,7 @@
-### Diagrama de flujo (Desafío abierto).
-![Diagrama de flujo](https://github.com/KarenWon9/WRO-FI-Team-Spark/blob/main/src/Diagrama%20de%20flujo%20(Desaf%C3%ADo%20abierto).jpg)
+# Flowcharts
+
+## Open challenge
+[![Captura-de-pantalla-2024-11-12-192306.png](https://i.postimg.cc/tggb8rHW/Captura-de-pantalla-2024-11-12-192306.png)](https://postimg.cc/0zhhw0jy)
+
+## Closed challenge
+[![Captura-de-pantalla-2024-11-12-222734.png](https://i.postimg.cc/ZKJ7pdvF/Captura-de-pantalla-2024-11-12-222734.png)](https://postimg.cc/V5HWc5Rd)
