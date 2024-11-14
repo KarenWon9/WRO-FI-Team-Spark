@@ -21,7 +21,7 @@
 
 ## Printing settings and recommendations
 
-In this explanation we use the original printing configurations implemented in the proyect, pero hay parámetros que dependen del material que se emplee, In the proyect we use PETG by sunlu, in addition to TPU by Eryone for the flexible parts in the chassis (the wings). You can modify this parameter depending on the material and the temperature of the ambient, the melting point of the material, and your 3D printer potential. in this case, we use the Elegoo Neptune 3 Pro.
+In this explanation we use the original printing configurations implemented in the proyect, but there are parameters that depend on the material to be used. In the proyect we use PETG by sunlu, in addition to TPU by Eryone for the flexible parts in the chassis (the wings). You can modify this parameter depending on the material and the temperature of the ambient, the melting point of the material, and your 3D printer potential. in this case, we use the Elegoo Neptune 3 Pro.
 
 All the files are distributed in an optimal positioning; this can say they are in a position ready to print when you insert them in the slicer (this time we use Ultimaker Cura) most of the pieces do not need support, except some pieces like the ultrasonicase pt 2 and the laser sensor pt1, But evaluating the configurations shows why it is recommended to use support in most of the pieces to increase the final resource, there are the recommended configurations for the pieces.
 
