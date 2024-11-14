@@ -91,9 +91,7 @@ This report explains the components and parts of the robot built and designed by
 | Motor GA37-520 of 320rpm                | 1            |
 | Servo Motor MG90S                       | 1            |
 | NI-MH Battery 12V 3000mAh               | 1            |
-| Condensator 10μF 50V                    | 1            |
-| LM2596 HW-411 Step Down                 | 1            |
-| Ceramic Capacitor 10nF (104) 50V        | 2            |
+| LM2596 HW-411 Step Down                 | 2            |
 | Switch button                           | 1            |
 
 ## Arduino mega
