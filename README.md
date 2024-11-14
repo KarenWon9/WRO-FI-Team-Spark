@@ -70,7 +70,7 @@
 <!---------------------------------------------espanol-------------------------------------------------------- -->
 
 # Introduction 
-The team Spark is a team from the Salto Angel School that is participating in the World Robot Olympiad 2024 (WRO) in the future engineers’ category. This team is comprised of three students: Victoria Saez, the new Captain who is in charge of the programming part: Sebastian Salina, who is responsible for the designing and mechanical parts of the robot: and finally Rosa Wong who attends the mechanic-electronic-documentation, is also a university student at the Rafael Urdaneta University.
+The team Spark is a team from the Salto Angel School that is participating in the World Robot Olympiad 2024 (WRO) in the future engineers’ category. This team is comprised of three students: Victoria Saez, the new Captain who is in charge of the programming and electronic parts: Sebastian Salina, who is responsible for the designing and mechanical parts of the robot: and finally Rosa Wong who attends the documentation, is also a university student at the Rafael Urdaneta University.
 
 The World Robot Olympiad (WRO) is an event where young people from different parts of the world meet to show their knowledge and abilities in diverse categories. The future engineers' category is based on the creation of an autonomous robot capable of traveling around a game field that measures 3m x 3m using obstacles in it or without them. Every year, the rules and challenges partially change and every four or five years represents a different challenge.
 
