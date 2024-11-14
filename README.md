@@ -85,7 +85,6 @@ This report explains the components and parts of the robot built and designed by
 | Arduino Mega                            | 1            |
 | Pixy2 Cam                               | 1            |
 | Ultrasonic Sensor (HC-SR04)             | 2            |
-| LM7805                                  | 1            |
 | Bridge H L298N                          | 1            |
 | Pull-up Button                          | 1            |
 | Motor GA37-520 of 320rpm                | 1            |
