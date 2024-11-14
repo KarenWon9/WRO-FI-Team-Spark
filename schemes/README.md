@@ -1,2 +1,2 @@
 # Circuit diagram
-[![A-adir-un-poquito-de-texto-1.png](https://i.postimg.cc/TPgsW1BF/A-adir-un-poquito-de-texto-1.png)](https://postimg.cc/nsV2yFFG)
+[![Diagrama-de-circuito.jpg](https://i.postimg.cc/3NtDyV8h/Diagrama-de-circuito.jpg)](https://postimg.cc/jnJjm8n3)
