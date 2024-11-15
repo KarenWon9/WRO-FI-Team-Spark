@@ -70,9 +70,9 @@
 <!---------------------------------------------espanol-------------------------------------------------------- -->
 
 # Introduction 
-The team Spark is a team from the Salto Angel School that is participating in the World Robot Olympiad 2024 (WRO) in the future engineers’ category. This team is comprised of three students: Victoria Saez, the new Captain who is in charge of the programming and electronic parts: Sebastian Salina, who is responsible for the designing and mechanical parts of the robot: and finally Rosa Wong who attends the documentation, is also a university student at the Rafael Urdaneta University.
+Spark is a team from the Salto Angel School participating in the World Robot Olympiad 2024 (WRO) in the future engineers’ category. This team is comprised of three students: Victoria Saez, the new Captain who is in charge of the programming part; Sebastian Salina, who is responsible for the designing and mechanicals of the robot; and finally, Rosa Wong, who attends the mechanic-electronic documentation and is also a university student at Rafael Urdaneta University.
 
-The World Robot Olympiad (WRO) is an event where young people from different parts of the world meet to show their knowledge and abilities in diverse categories. The future engineers' category is based on the creation of an autonomous robot capable of traveling around a game field that measures 3m x 3m using obstacles in it or without them. Every year, the rules and challenges partially change and every four or five years represents a different challenge.
+The World Robot Olympiad (WRO) is an event where young people from different parts of the world meet to show their knowledge and abilities in diverse categories. The future engineers' category is based on the creation of an autonomous robot capable of driving around a game field that measures 3m x 3m using obstacles in it or without them. Every year, the rules and challenges partially change and every four or five years represents a different challenge.
 
 This report explains the components and parts of the robot built and designed by Team Spark to afford all the competition`s challenges.
 
@@ -120,7 +120,7 @@ analogic, and PWM.
 | **Dimension** | 22.5 x 12 x 35.5 mm        | **Operating voltage**| 4.8 V - 6.0 V    |
 | **Stall torque**  | 1.8 kgf·cm (4.8V), 2.2 kgf·cm (6V) | **Dead band width**   | 5 μs |
 
-It uses the servomotor MG90S in the turn system to get
+It uses the servomotor MG90S in the turning system to get
 precise turns. This model is smaller, lighter, and offers higher
 torque than the SG90, which allows it to move the wheels with
 the necessary strength for shunting, mainly in obstacle
@@ -135,13 +135,14 @@ called `SERVOPIN` where we put the pin that is in use, in this case, it is the 9
 #include <Servo.h> // Library to control servomotors.
 
 
-#define SERVOPIN 9 // Define the pin to the servomotor.
+#define SERVOPIN 9 // Define the pin for the servomotor.
 
 
-#define TURNGRADE 30 // Define the turning grades to the correct direction
-#define CENTERVALUE 90 // Center value to the servomotor (straight).
-#define MAXLEFT 156 // Higher value towards the left to the servomotor.
-#define MAXRIGHT 5 // Higher value towards the right to the servomotor.
+#define TURNGRADE 30 // Define the turning grades for the correct direction
+#define CENTERVALUE 90 // Center value for the servomotor (straight).
+#define MAXLEFT 156 // Top value towards the left for the servomotor.
+#define MAXRIGHT 5 // Top value towards the right for the servomotor.
+
 
 
 Servo direction; // Create an instance of the servomotor.
@@ -155,7 +156,7 @@ void center() {
 
 void turnLeft() {
   if (DEBUG) Serial3.println("Left"); // Print "Left" if DEBUG is active.
-  direction.write(MAXLEFT); // Turn the servomotor at maximum to the left.
+  direction.write(MAXLEFT); // Turn the servomotor at the top to the left.
   direction.write(MAXLEFT); // Repeat the writing with precision.
   setMove(500, 1, TURNSPEED); // Perform the movement with 500 ticks in direction1 (forward) to TURNSPEED.
   center(); // Center the servomotor after the turning.
@@ -165,7 +166,7 @@ void turnLeft() {
 
 void turnRight() {
   if (DEBUG) Serial3.println("Right"); // Print "right" if DEBUG is active.
-  direction.write(MAXRIGHT); // Turn the servomotor at maximum to the right
+  direction.write(MAXRIGHT); // Turn the servomotor at the top to the right
   direction.write(MAXRIGHT); // Repeat the writing with precision.
   setMove(760, 1, MAXSPEED); // Perform the movement with 760 ticks in direction1 (forward) to MAXSPEED.
   center(); // Center the servomotor after the turning.
@@ -265,10 +266,10 @@ Blue: // Tag the blue object.
             followLine(SPEED2); // Follow the wall to 'SPEED2'.
             readDistance(currentPosition); // Update 'currentPosition'
           }
-          turnLeft(); // Turn to the left
-          moveCM(40, 1, MAXSPEED); // Move the robot 40 cm forward at the highest speed. 
+         turnLeft(); // Turn to the left
+          moveCM(40, 1, MAXSPEED); // Move the robot 40 cm forward to high-speed. 
           do {
-            followLine(MAXSPEED); // Follow the inner walls to high speed
+            followLine(MAXSPEED); // Follow the inner walls to top-speed
             readDistance(currentPosition); // Update 'currentPosition'
           } while (currentPosition[3] > 100); // Repeat while the left distance is more than 100 cm
           break;
@@ -296,9 +297,9 @@ Orange: // Tag the orange object.
             readDistance(currentPosition); // Update 'currentPosition'
           }
           turnRight(); // Turn to the right.
-          moveCM(40, 1, MAXSPEED); // Move the robot 40 cm forward at the highest speed.
+          moveCM(40, 1, MAXSPEED); // Move the robot 40 cm forward to high-speed.
           do {
-            followLine(MAXSPEED); // Follow the inner Wall to a higher. 
+            followLine(MAXSPEED); // Follow the inner Wall to top-speed. 
             readDistance(currentPosition); // Update 'currentPosition'
           } while (currentPosition[2] > 100); // Repeat while the right distance is more than 100 cm
           break;
@@ -330,27 +331,26 @@ by its potential to detect distances at millimeters.
  ```ino
 #include <Wire.h> // Library to communicate I2C.
 #include <DFRobot_VL53L0X.h> // Library to the VL53L0X distance sensor.
- #define SENSORCOUNT 1 // Define the VL53L0X sensor`s number.
+ #define SENSORCOUNT 1 // Define the sensor`s number VL53L0X.
 
 
- DFRobot_VL53L0X sensors[SENSORCOUNT]; // Create an array of VL53L0X sensors.
- const uint8_t xshutPins[SENSORCOUNT] = { 38 }; // Pin to enable or disenable the VL53L0X sensor.
+ DFRobot_VL53L0X sensors[SENSORCOUNT]; // Create an array of sensors VL53L0X.
+ const uint8_t xshutPins[SENSORCOUNT] = { 38 }; // Pin to enable or disenable the sensor VL53L0X.
 
 
 void initSensor() {
-  Wire.begin(); // Begin the communication I2C
-
+  Wire.begin(); // Start the I2C communication.
 
   for (uint8_t i = 0; i < SENSORCOUNT; i++) {
-    pinMode(xshutPins[i], OUTPUT); // Set the sensor`s off pin as an output. 
+    pinMode(xshutPins[i], OUTPUT); // Setting the sensor`s off pin as an output. 
     digitalWrite(xshutPins[i], LOW); // Turn off the corresponding sensor. 
   }
 
 
   for (uint8_t i = 0; i < SENSORCOUNT; i++) {
-    pinMode(xshutPins[i], INPUT); // Set the sensor`s off pin as an input to restar the sensor.
+    pinMode(xshutPins[i], INPUT); // Configure the sensor`s off pin as an input to restart the sensor.
     delay(10); // Delay 10 ms to restart the sensor
-    sensors[i].begin(0x2A + (i * 2)); // Start the sensor with the specific direction I2C
+    sensors[i].begin(0x2A + (i * 2));
     sensors[i].setMode(sensors[i].eContinuous, sensors[i].eHigh); // Configure the continuous mode and the high precision.
     sensors[i].start(); // Start the sensor measurement.
   }
@@ -377,7 +377,7 @@ void readDistance(unsigned int* array) {
 | **Input Trigger signal**  | Input 10μs TTL | **Pulso Echo** | Output 100-25000 μs TTL |
 
 The ultrasonic sensors are essential in our robot because
-let calculate distances by using ultrasonic vibes. These
+let's calculate distances by using ultrasonic vibes. These
 sensors own a transmitter that sends the vibe and a receiver
 to detect the echo of the reflexive vibes which lets us
 determine the distance by the time it takes to come back with
@@ -388,24 +388,23 @@ anticipate possible coalitions effectively.
 
 ### Code
 
- To facilitate the frequency conversion of the reception of the vibes in cm, use the library `<Ultrasonic.h>` and subsequently, define each sensor pin with Ultrasonic and the name given to the sensor followed by the (Trig, Echo).
-
+ To facilitate the frequency conversion of the Vibes reception in cms, use the library `<Ultrasonic.h>` and subsequently, define each sensor pin with Ultrasonic and the name given to the sensor followed by the (Trig, Echo).
 ``` ino
 #include <Ultrasonic.h> // Library to manage ultrasonic sensors.
-#define USTRIGHT A13 // Define the signal pin to the right ultrasonic sensor.
-#define USERIGHT A12 // Define the echo pin to the right ultrasonic sensor.
-#define USTLEFT A14 // Define the signal pin to the left ultrasonic sensor
-#define USELEFT A15 // Define the echo pin to the left ultrasonic sensor.
+#define USTRIGHT A13 // Define the signal pin for the right ultrasonic sensor.
+#define USERIGHT A12 // Define the echo pin for the right ultrasonic sensor.
+#define USTLEFT A14 // Define the signal pin for the left ultrasonic sensor.
+#define USELEFT A15 // Define the echo pin for the left ultrasonic sensor.
 
 
-Ultrasonic USRight(USTRIGHT, USERIGHT); // Instance to the right ultrasonic sensor.
-Ultrasonic USLeft(USTLEFT, USELEFT); // Instance to the left ultrasonic sensor.
+Ultrasonic USRight(USTRIGHT, USERIGHT); // Instance for the right ultrasonic sensor.
+Ultrasonic USLeft(USTLEFT, USELEFT); // Instance to for left ultrasonic sensor.
 
 
 int firstPosition[4]; // Array to upload the first position detected. 
 int lastPosition[4]; // Array to upload the last position detected.
 int currentPosition[4]; // Array to upload the current position detected.
-int tempPosition[4]; // Array to upload the detected position temporarily.
+int tempPosition[4]; // Array to upload the temporary position detected.
 
 
 void readDistance(unsigned int* array) {
@@ -425,7 +424,7 @@ if (DEBUG2) printDistance(currentPosition); // Print the distances if DEBUG2 is 
     grade = map(currentPosition[3], tempPosition[3] - LMIN, tempPosition[3] + LMIN, -TURNGRADE, TURNGRADE); // Map the angle correction to the left.
     if (DEBUG) Serial3.println("2 Actual: " + String(currentPosition[3]) + ". Inicial: " + String(tempPosition[3])); // Depuration
   }
-  if (DEBUG) Serial3.println("Grades : " + String(grade)); // Print the angle correction calculated.
+ if (DEBUG) Serial3.println("Grades : " + String(grade)); // Print the angle calculated correction.
   if (grade > TURNGRADE) { // Limit the higher turning angle.
     grade = TURNGRADE;
   } else if (grade < TURNGRADE * -1) { // Limit the lower turning angle
@@ -448,7 +447,7 @@ have chosen a 12V battery and 3000 mAh Rev Robotics. This
 new battery offers significant advantages.
 
 Firstly, it gives better autonomy, letting the robot work
-through longer periods without the charging need. Its 12
+through longer periods without the charging needs. Its 12
 voltages are enough to completely provide the energetic
 needs of the robot, ensuring a favorable performance.
 
@@ -459,8 +458,9 @@ on international trips by airplane because it is made with
 nickel which is safe for its transport.
 
 Lastly, it is a prefabricated battery and offers a superior
-level of security and efficiency compared to the settings of
+level of security and efficiency as compared to the settings of
 individual batteries.
+
 
 ## Motor GA37-520
 [![51-J-66l-USg-L.jpg](https://i.postimg.cc/dV0214sb/51-J-66l-USg-L.jpg)](https://postimg.cc/xcWJpGb5) 
@@ -473,7 +473,13 @@ individual batteries.
 | **No-load current** | ≥120mA | **Rated current**  | ≥400mA |
 | **Rated torque** | 3.1Kg.cm  | **Par nominal**  | 0.67Kg.cm    |
 
-With the acquired kit, we have gotten various pieces that we could grip like the motors, bases, and wheels. Each motor of 12V is capable of going at a nominal speed of 250rpm and a 3,5 kg torque. Therefore using just a 12V motor is enough to give it the speed, control, and attraction needed, as well as greater management thanks to its encoder which lets have better precision in the turns that the robot should do in the game field.
+From a robotic kit, we have obtained two motors. Each one
+to 12V, they are capable of going at a nominal speed of
+250rpm and a 3,5 kg torque. Therefore using just a 12V motor
+is enough to give it the speed, control, and attraction needed,
+as well as greater management thanks to its encoder which
+Let us have better precision in the turns that the robot should
+do in the game field.
 
 ### Code
 
@@ -486,29 +492,30 @@ equally, we defined 3 different speeds (`MAXSPEED`,
 between 255 and 0.
 
 ``` ino
-#define IN1 4 // Define the control pin of the motor IN1.
-#define IN2 5 // Define the control pin of the motor IN2.
-#define MAXSPEED 250 //Higher Speed of the motor.
-#define TURNSPEED 180 // turnings Speed.
-#define SPEED2 140 // secundary Speed.
+#define IN1 4 // Define IN1 to the motor control pin.
+#define IN2 5 // Define IN2 to the motor control pin.
+
+
+#define MAXSPEED 250 // Top-Speed of the motor.
+#define TURNSPEED 180 // Turnings Speed.
+#define SPEED2 140 // Secundary Speed.
+
 void stop() {
-  if (DEBUG) Serial3.println(&quot;Stop&quot;); // Print &quot;Stop&quot; in the serial monitor if the mode
-depuration is active.
-  digitalWrite(IN1, LOW); // Turn off the motor in the IN1 direction.
-  digitalWrite(IN2, LOW); // Turn off the motor in the IN2 direction.
+  if (DEBUG) Serial3.println("Stop"); // Print "Stop" in the serial monitor if the mode depuration is active.
+  digitalWrite(IN1, LOW); // Turn off the motor in the IN1 direction.
+  digitalWrite(IN2, LOW); // Turn off the motor in the IN2 direction.
 }
+
 void forward(byte speed) {
-  if (DEBUG2) Serial3.println(&quot;Forward &quot; + String(speed)); // Print &quot;Forward&quot; and the
-speed if DEBUG2 is active.
-  analogWrite(IN1, speed); // Assign the speed in IN1 to go forward.
-  digitalWrite(IN2, LOW); 
+  if (DEBUG2) Serial3.println("Forward " + String(speed)); // Print "Forward" and the speed if DEBUG2 is active.
+  analogWrite(IN1, speed); // Assign the speed in IN1 to go forward.
+  digitalWrite(IN2, LOW); 
 }
 void backward(byte speed) {
+  if (DEBUG) Serial3.println("Backward " + String(speed)); // Print "Backward" and the speed if DEBUG is active.
+  digitalWrite(IN1, LOW); // turn off IN1 to return
+  analogWrite(IN2, speed);
 
-  if (DEBUG) Serial3.println(&quot;Backward &quot; + String(speed)); // Print &quot;Backward&quot; and
-the speed if DEBUG is active.
-  digitalWrite(IN1, LOW); // turn off IN1 to return
-  analogWrite(IN2, speed);
 }
 ```
 
@@ -533,15 +540,15 @@ The robot is made up of four floors
 listed from button to top.
 
 ## First and Second Floor
-Both floors are connected themselves including the Steering system and the Driven
+Both floors are connected themselves including the Steering system and the Driving
 system.
 
 ### Front Axle
 The front axle of our robot is located in a steering system boosted by a servo
 (Mg90s). this system counts with two wings, a superior one and a lower one, that
-allow an appropriate Caster, between the wings we can find the pivots which count
+allow an appropriate Caster, between the wings we can find the pivots that count
 with two bearings that facilitate the free movement of the wheels and avoid an
-incorrect Camber, both pivots includes a steering arm which is connected through
+incorrect Camber, both pivots include a steering arm which is connected through
 the Tie Rod.
 
 Movement transmission is carried out by the servo connected to the Tie Rod. This
