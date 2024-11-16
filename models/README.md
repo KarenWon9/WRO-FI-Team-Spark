@@ -57,11 +57,11 @@ All the files are distributed in an optimal positioning; this can say they are i
         - Build Plate: 70°
 
 > [!NOTE]
-> The only pieces that is totally necesary to print with supports like the Ultrasonic Case pt2 and Laser sensor case pt1, We recomen print the pieces in this configurations.
+> The only pieces that is totally necessary to print with supports like the Ultrasonic Case pt2 and Laser sensor case pt1, We recommend print the pieces in this configurations.
 
 [![Whats-App-Image-2024-11-11-at-4-53-03-PM-1.jpg](https://i.postimg.cc/mrKMqxyG/Whats-App-Image-2024-11-11-at-4-53-03-PM-1.jpg)](https://postimg.cc/gwqnXT7M)
 
 [![Whats-App-Image-2024-11-11-at-4-53-04-PM.jpg](https://i.postimg.cc/kg1WQRVG/Whats-App-Image-2024-11-11-at-4-53-04-PM.jpg)](https://postimg.cc/HrMJHx91)
 
 > [!TIP]
-> The recomended materials for this proyect are ASA and ABS for their mechanical properties, Temperature resistance and stability for this Kind of proyects that requires mechanical stress and impact resístanse.
+> The recommended materials for this project are ASA and ABS for their mechanical properties, Temperature resistance and stability for this Kind of projects that requires mechanical stress and impact resistance.
