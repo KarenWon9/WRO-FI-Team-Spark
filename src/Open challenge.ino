@@ -369,10 +369,3 @@ void doceVueltas() {
 
 void loop() {
 }
-
-
-    run = false;
-    analogWrite(IN1, 0); // Stop the motor
-    analogWrite(IN2, 0); // Stop the motor
-  }
-}
