@@ -1,7 +1,7 @@
 /*
 Opening challenge code of the Team Spark, future Engineers’ category.
     Using Pixycam2.1 to detect blue and orange lines, ultrasonic sensor HC-SR04 
-  To detect the left and right distance of the robot, sensor VL53L0X to detect frontal direction distance, servomotor mg90s to direct the robot, motor DC and Bluetooth module to the practices.
+  To detect the left and right distance of the robot, sensor VL53L0X to detect frontal direction distance (no longer used in this code), servomotor mg90s to direct the robot, motor DC and Bluetooth module to the practices.
   (this will not be allowed during the competition according to the rules).
 */
 
