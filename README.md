@@ -9,7 +9,6 @@
     - [Servo motor MG90S](#servo-motor-mg90s)
     - [Bridge H (L293N)](#bridge-h-l293n)
     - [Pixy2 cam](#pixy2-cam)
-    - [Distance sensor (ToF) VL53L0X)](#distance-sensor-tof-vl53l0x)
     - [Ultrasonic sensor (HC-S04)](#ultrasonic-sensor-hc-s04)
     - [Battery and charger](#battery-and-charger)
     - [Motor GA37-520](#motor-ga37-520)
@@ -306,64 +305,6 @@ Orange: // Tag the orange object.
       }
 
 ```
-
-## Distance sensor (ToF) VL53L0X
-[![vl53l0x.png](https://i.postimg.cc/C1gmrb0m/vl53l0x.png)](https://postimg.cc/jWMHLwL7) [![vl53l0x-1.png](https://i.postimg.cc/Tw3WPPJT/vl53l0x-1.png)](https://postimg.cc/JySh6MFF)
-
-| | | | |
-| --- | --- | --- | --- |
-|**Operating voltagen**| 3V - 5V DC| **Operating current**| 10mA (40mA máx)|
-| **Range**     | 50mm a 1200m   | **Precision**   | ±30mm    |
-| **Interface**   | I2C 400kHz       |       |                      |
-
-It uses the VL53L0X distance laser sensor, which is based
-on flight time (ToF), and employs an infrared laser to measure
-distances with a higher precision. This sensor lets the robot
-have a better understanding of its position and allows the
-ability to park at the end of the third turning in the game field
-by its potential to detect distances at millimeters.
-
-### Code
-
-#### Closed challenge
- First of all, we include the library `<DFRobot_VL53L0X>` to facilitate the sensor usage while the library Wire.h to start the communication I2C.
-
- ```ino
-#include <Wire.h> // Library to communicate I2C.
-#include <DFRobot_VL53L0X.h> // Library to the VL53L0X distance sensor.
- #define SENSORCOUNT 1 // Define the sensor`s number VL53L0X.
-
-
- DFRobot_VL53L0X sensors[SENSORCOUNT]; // Create an array of sensors VL53L0X.
- const uint8_t xshutPins[SENSORCOUNT] = { 38 }; // Pin to enable or disenable the sensor VL53L0X.
-
-
-void initSensor() {
-  Wire.begin(); // Start the I2C communication.
-
-  for (uint8_t i = 0; i < SENSORCOUNT; i++) {
-    pinMode(xshutPins[i], OUTPUT); // Setting the sensor`s off pin as an output. 
-    digitalWrite(xshutPins[i], LOW); // Turn off the corresponding sensor. 
-  }
-
-
-  for (uint8_t i = 0; i < SENSORCOUNT; i++) {
-    pinMode(xshutPins[i], INPUT); // Configure the sensor`s off pin as an input to restart the sensor.
-    delay(10); // Delay 10 ms to restart the sensor
-    sensors[i].begin(0x2A + (i * 2));
-    sensors[i].setMode(sensors[i].eContinuous, sensors[i].eHigh); // Configure the continuous mode and the high precision.
-    sensors[i].start(); // Start the sensor measurement.
-  }
-}
- ```
-
-We create an array to upload the distance detected by the sensor.
-
-``` ino
-void readDistance(unsigned int* array) {
-  array[0] = sensors[0].getDistance(); // Upload the distance measured by the frontal sensor.
-```
-
 
 
 ## Ultrasonic sensor (HC-S04)
