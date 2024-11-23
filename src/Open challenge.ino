@@ -20,10 +20,10 @@ Opening challenge code of the Team Spark, future Engineers’ category.
 #define LEDREADY 53 // Define the indicated control LED pin.
 #define SERVOPIN 9 // Define the servomotor pin.
 #define ENCODERPIN 2 // Define the encoder pin.
-#define USTRIGHT A13 // Define the signal pin to the right ultrasonic sensor.
-#define USERIGHT A12 // Define the echo pin to the right ultrasonic sensor.
-#define USTLEFT A14 // Define the signal pin to the left ultrasonic sensor.
-#define USELEFT A15 // Define the echo pin to the left ultrasonic sensor.
+#define USTRIGHT 31// Define the signal pin to the right ultrasonic sensor.
+#define USERIGHT 30 // Define the echo pin to the right ultrasonic sensor.
+#define USTLEFT 45 // Define the signal pin to the left ultrasonic sensor.
+#define USELEFT 44 // Define the echo pin to the left ultrasonic sensor.
 
 #define TURNGRADE 30 // Define the turning grade to check the direction adjustment.
 #define NEUTRO 0 // Define constant to the neutral state.
