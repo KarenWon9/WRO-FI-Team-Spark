@@ -8,10 +8,10 @@
 // Pins and constants definition
 #define SERVOPIN 9
 #define ENCODERPIN 2
-#define USTRIGHT 46
-#define USERIGHT 47
-#define USTLEFT 26
-#define USELEFT 27
+#define USTRIGHT 45
+#define USERIGHT 44
+#define USTLEFT 31
+#define USELEFT 30
 #define IN1 4
 #define IN2 5
 #define STARTBUTTON 18
